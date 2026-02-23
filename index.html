@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VANNA PRODUCTION | VANNA PRODUCTION</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+header h1{
+  color:#facc15;
+  letter-spacing:3px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:30px;
+  transition:0.3s;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#facc15;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  height:100vh;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  background:radial-gradient(circle at center, #111 0%, #000 80%);
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(250,204,21,0.15) 0%, transparent 70%);
+  animation:pulse 6s infinite ease-in-out;
+}
+
+.logo{
+  width:220px;
+  margin-bottom:30px;
+  filter:drop-shadow(0 0 25px #facc15);
+  animation:float 5s ease-in-out infinite;
+  z-index:2;
+}
+
+.hero-title{
+  font-size:60px;
+  font-weight:800;
+  letter-spacing:4px;
+  z-index:2;
+}
+
+.hero-title span{
+  color:#facc15;
+}
+
+.tagline{
+  margin-top:15px;
+  font-weight:300;
+  letter-spacing:3px;
+  color:#aaa;
+  z-index:2;
+}
+
+.btn{
+  margin-top:35px;
+  padding:14px 40px;
+  border-radius:40px;
+  background:linear-gradient(45deg,#facc15,#eab308);
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.4s;
+  z-index:2;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 30px #facc15;
+}
+
+/* ================= SECTION ================= */
+
+section{
+  padding:120px 10%;
+  text-align:center;
+}
+
+.section-title{
+  font-size:36px;
+  color:#facc15;
+  margin-bottom:40px;
+  letter-spacing:2px;
+}
+
+.about{
+  max-width:800px;
+  margin:auto;
+  color:#ccc;
+  line-height:1.8;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#111;
+  padding:40px;
+  border-radius:20px;
+  transition:0.4s;
+  border:1px solid rgba(250,204,21,0.1);
+}
+
+.card:hover{
+  transform:translateY(-15px);
+  box-shadow:0 0 25px rgba(250,204,21,0.3);
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#0a0a0a;
+  color:#666;
+  font-size:14px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+  100%{transform:translateY(0);}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1); opacity:0.4;}
+  50%{transform:scale(1.2); opacity:0.8;}
+  100%{transform:scale(1); opacity:0.4;}
+}
+
+@media(max-width:768px){
+  .hero-title{
+    font-size:36px;
+  }
+  .logo{
+    width:160px;
+  }
+}
+.poster {
+  position: relative;
+  overflow: hidden;
+}
+/* POSTER */
+.poster{
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+  background:#000;
+}
+
+.poster img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  transition:0.7s ease;
+  filter:brightness(0.75) contrast(1.1);
+}
+
+.poster:hover img{
+  transform:scale(1.08);
+  filter:brightness(1);
+}
+
+/* OVERLAY */
+.overlay{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:40px;
+  background:linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+}
+
+.overlay h3{
+  font-size:30px;
+  color:#facc15;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.overlay p{
+  color:#ccc;
+  margin-bottom:15px;
+}
+
+.watch-btn{
+  padding:10px 25px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#facc15,#eab308);
+  color:#000;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.watch-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 25px #facc15;
+}
+
+/* BACKGROUND BIG TEXT */
+.bg-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:120px;
+  font-weight:900;
+  color:rgba(255,215,0,0.05);
+  letter-spacing:10px;
+  pointer-events:none;
+}
+
+/* TRAILER MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+
+.modal-content{
+  width:80%;
+  max-width:800px;
+}
+
+.modal iframe{
+  width:100%;
+  height:450px;
+}
+
+.close{
+  position:absolute;
+  top:40px;
+  right:60px;
+  font-size:40px;
+  color:#fff;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>HOME</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="ChatGPT_Image_19_Jan_2026__23.17.08-removebg-preview.png" class="logo" alt="Vanna Eye Logo">
+  
+  <h2 class="hero-title">
+    VANNA <span>PRODUCTION</span>
+  </h2>
+
+  <p class="tagline">
+    CRAFTING VISUAL STORIES WITH IDENTITY
+  </p>
+
+  <button class="btn" onclick="scrollToSection('projects')">
+    EXPLORE PROJECTS
+  </button>
+</section>
+
+<section id="about">
+  <h2 class="section-title">ABOUT</h2>
+  <div class="about">
+    VANNA PRODUCTION adalah identitas visual yang lahir dari kegelapan,
+    membangun cerita melalui sinematografi yang kuat, misterius,
+    dan penuh karakter. Setiap frame adalah pernyataan.
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">PROJECTS</h2>
+  <div class="projects">
+    <div class="projects">
+
+  <div class="card poster">
+
+    <img src="IMG_20260130_040732-removebg-preview.png" alt="THE JAYA">
+
+    <div class="overlay">
+      <h3>THE JAYA</h3>
+      <p>Coming Soon</p>
+      <button class="watch-btn" onclick="openTrailer()">Watch trailer</button>
+    </div>
+
+    <div class="bg-text">JAYA</div>
+
+  </div>
+
+</div>
+    <div class="card paragraf">
+    <h3>"Pada Tahun 1401 hidup lah seorang anak yang bernama Sanjaya sebagai tokoh utama.
+      sejak kecil Sanjaya di asuh oleh kakek tua yang bernama Mpu Sedah.Sanjaya sediri sejak kecil tidak
+      pernah mengatahui orang tua nya dan Mpu sedah pun tidak pernah cerita dari mana dia
+      berasal.Mpu Sedah merawat dan membesarkan Sajaya yang di anggap mempunyai keturunan
+      Dyah Wijaya atau Raden Wijaya.Mpu Sedah memberikan katana kepada Sanjaya untuk berlatih
+      setiap hari sampai dewasa Sanjaya di kenal oleh masyarakat kesatria panunggal dan di beri
+      julukan Arya Sanjaya.suatu saat Mpu Sedah memberi mandat kepada Sajaya untuk berkelana
+      ke beberapa kerajaan yang ada di Jawa berharap agar bisa menjadi pengawal di suatu kerjaan
+      dan Sanjaya pun pergi cukup lama untuk berkelana sejak saat itu Sanjaya tidak pernah melihat
+      guru nya lagi meskipun Sanjaya kembali ke desa."</h3> 
+    
+    
+  </div>
+  <div class="card">Brand Identity Film</div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">CONTACT</h2>
+  <div class="about">
+    Email: vallinone887@gmail.com <br>
+    Instagram: @vannalf
+  </div>
+</section>
+
+<footer>
+  © 2026 VANNA PRODUCTION — All Rights Reserved.
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+<script>
+function openTrailer(){
+  document.getElementById("trailerModal").style.display="flex";
+}
+
+function closeTrailer(){
+  document.getElementById("trailerModal").style.display="none";
+}
+</script>
+<div class="modal" id="trailerModal">
+  <span class="close" onclick="closeTrailer()">×</span>
+  <div class="modal-content">
+    <!-- Ganti link youtube nanti -->
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+</body>
+</html>
